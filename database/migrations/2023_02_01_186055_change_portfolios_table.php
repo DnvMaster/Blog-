@@ -14,9 +14,7 @@ class ChangePortfoliosTable extends Migration
     public function up()
     {
         Schema::table('portfolios', function (Blueprint $table) {
-            # filters_alias
             $table->string('filter_alias');
-            #filter_alias - filters
             $table->foreign('filter_alias')->references('alias')->on('filters');
         });
     }
