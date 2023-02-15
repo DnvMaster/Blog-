@@ -8,7 +8,7 @@ class IndexController extends BlogController
 {
     public function __construct()
     {
-        parent::__construct();
+        parent::__construct(new \Blog\Repositories\MenusRepository(new \Blog\Menu()));
         $this->bar = 'right';
         $this->template = env('BLOG').'.index';
     }
